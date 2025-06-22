@@ -8,6 +8,7 @@ This is a simple implementation of the String Calculator TDD in **JavaScript**, 
 
 The `add` method of the String Calculator supports:
 - **Empty strings**: Returns `0`.
+- **Single numbers**: Returns the number itself.
 
 ---
 

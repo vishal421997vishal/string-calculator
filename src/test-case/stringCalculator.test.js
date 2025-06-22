@@ -1,7 +1,7 @@
 const {add} = require('../stringCalculator');
 console.log(add(""));
 console.log(add("10"));
-console.log(add("1,2,3"));
+console.log(add("1,2,3,4,5,6,7,8,9,10"));
 
 describe('String Calculator', () => {
 
@@ -15,5 +15,9 @@ describe('String Calculator', () => {
 
   test('should return the sum of two numbers separated by a comma', () => {
     expect(add("1,2")).toBe(3);
+  });
+
+  test('should return the sum of multiple numbers separated by commas', () => {
+    expect(add("1,2,3,4")).toBe(10);
   });
 });

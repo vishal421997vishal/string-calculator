@@ -1,13 +1,5 @@
 const {add} = require('../stringCalculator');
 console.log(add(""));
-console.log(add("10"));
-console.log(add("1,2,3,4,5,6,7,8,9,10"));
-console.log(add("1" +
-  ",3," +
-  "4"));
-console.log(add("1\n2,3"));
-console.log(add("1\\n2,3"));
-console.log(add("//;\n1;2"));
 
 describe('String Calculator', () => {
 
@@ -33,5 +25,9 @@ describe('String Calculator', () => {
 
   test('should support custom delimiters', () => {
     expect(add("//;\n1;2")).toBe(3);
+  });
+
+  test('should throw an error for negative numbers', () => {
+    expect(() => add("1,-2,3")).toThrow("negative numbers not allowed: -2");
   });
 });
